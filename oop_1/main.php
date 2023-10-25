@@ -38,8 +38,3 @@ echo PHP_EOL;
 
 // 車の情報を表示
 echo $car1->information();
-
-
-
-
-//sjjaoi;sd
