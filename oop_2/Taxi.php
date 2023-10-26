@@ -11,10 +11,8 @@ class Taxi extends Car
     public function pickUp($geton_nm)
     {
         $on_result = '';
-        if ($geton_nm == 1 || $geton_nm == 2) {
-            $on_result = "{$geton_nm}人乗車しました" . PHP_EOL;
-            $this->passenger += $geton_nm;
-        }
+        $on_result = "{$geton_nm}人乗車しました" . PHP_EOL;
+        $this->passenger += $geton_nm;
         return $on_result;
     }
 
@@ -24,7 +22,7 @@ class Taxi extends Car
         if ($this->passenger - $getoff_nm > 0) {
             $off_result = "{$getoff_nm}人降車しました" . PHP_EOL;
             $this->passenger -= $getoff_nm;
-        } elseif ($this->passenger - $getoff_nm < 0) {
+        } else {
             $off_result = "{$getoff_nm}人は降車できません" . PHP_EOL;
         }
 
